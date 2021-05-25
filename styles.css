@@ -1,0 +1,28 @@
+/* hides the favorite count */
+.favorite-count {
+  display: none;
+}
+
+/* hides "pena" and "eksi seyler" buttons from the navigation bar */
+#nav-extra-buttons {
+  display: none !important;
+}
+
+/* hides sol frame */
+/* #index-section {
+  display: none;
+} */
+
+/* hides eksi seyler window on sag frame */
+#aside > iframe {
+  display: none !important;
+}
+
+#eksiseyler-author-embed {
+  display: none !important;
+}
+
+/* hides karma information and entry count badge (i.e "azimli") on profile page */
+#user-badges {
+  display: none;
+}
