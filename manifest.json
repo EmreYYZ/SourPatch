@@ -11,6 +11,18 @@
     "matches": ["https://*.eksisozluk.com/*", "http://*.eksisozluk.com/*"]
   }],
 
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "permissions": [
+    "contextMenus"
+  ],
+
+  "icons": {
+    "128": "icon128.png"
+  },
+
   "action": {
     "default_popup": "popup.html"
   },

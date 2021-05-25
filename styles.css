@@ -26,3 +26,15 @@
 #user-badges {
   display: none;
 }
+
+/* other shit */
+.favorite-link {
+  margin-right: 0.5rem;
+  opacity: 0.75;
+  text-decoration: none !important;
+}
+
+.favorite-link:hover {
+  opacity: 1;
+  text-decoration: none !important;
+}
