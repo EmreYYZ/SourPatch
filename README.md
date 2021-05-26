@@ -2,6 +2,19 @@
 
 A Chrome extension for eksisozluk.com.
 
+- [🍋 SourPatch](#-sourpatch)
+  - [English](#english)
+    - [What is Ekşi Sözlük?](#what-is-ekşi-sözlük)
+    - [What does SourPatch do?](#what-does-sourpatch-do)
+  - [Turkish](#turkish)
+    - [SourPatch neden var?](#sourpatch-neden-var)
+    - [Nasil kullanilir?](#nasil-kullanilir)
+    - [Secenekler](#secenekler)
+      - [Sol Frame'i gizle](#sol-framei-gizle)
+  - [Yapilacaklar Listesi](#yapilacaklar-listesi)
+  - [Katki](#katki)
+  - [Tesekkurler](#tesekkurler)
+
 ## English
 
 ### What is Ekşi Sözlük?
