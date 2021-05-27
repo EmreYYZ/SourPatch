@@ -10,6 +10,7 @@ A Chrome extension for eksisozluk.com.
     - [SourPatch neden var?](#sourpatch-neden-var)
     - [Nasil kullanilir?](#nasil-kullanilir)
     - [Secenekler](#secenekler)
+      - [Eksi Seyler ve Pena referanslarini gizle](#eksi-seyler-ve-pena-referanslarini-gizle)
       - [Sol Frame'i gizle](#sol-framei-gizle)
   - [Yapilacaklar Listesi](#yapilacaklar-listesi)
   - [Katki](#katki)
@@ -44,6 +45,12 @@ Eklentiyi kullandiktan sonra ruh halimde bir iyilesme gozlemledim, hatta telefon
 Eger favori butonu yerine limon goruyorsaniz bilin ki eklenti aktif ve calisiyor. Entry favlamak isterseniz o limona tiklamaniz yeterli.
 
 ### Secenekler
+
+#### Eksi Seyler ve Pena referanslarini gizle
+Asagida listelenen referansari gizler:
+- Ust menudeki "pena" ve "eksi seyler" butonlari.
+- Sag frame'deki "eksi seyler" penceresini
+- Profil sayfasinda sag frame'de "yazarin eksi seyler entry'leri" penceresini.
 
 #### Sol Frame'i gizle
 
