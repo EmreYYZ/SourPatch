@@ -6,12 +6,14 @@ A Chrome extension for eksisozluk.com.
   - [English](#english)
     - [What is Ekşi Sözlük?](#what-is-ekşi-sözlük)
     - [What does SourPatch do?](#what-does-sourpatch-do)
-  - [Turkish](#turkish)
+  - [Turkce](#turkce)
     - [SourPatch neden var?](#sourpatch-neden-var)
     - [Nasil kullanilir?](#nasil-kullanilir)
-    - [Secenekler](#secenekler)
+    - [Secenekler (Suan icin secme sansiniz yok.)](#secenekler-suan-icin-secme-sansiniz-yok)
+      - [Entry'lerin favori sayilarini gizle](#entrylerin-favori-sayilarini-gizle)
+      - [Karma seviyesini, puanini ve Entry basarimini gizle](#karma-seviyesini-puanini-ve-entry-basarimini-gizle)
       - [Eksi Seyler ve Pena referanslarini gizle](#eksi-seyler-ve-pena-referanslarini-gizle)
-      - [Sol Frame'i gizle](#sol-framei-gizle)
+      - [Sol Frame'i gizle (aktif degil)](#sol-framei-gizle-aktif-degil)
   - [Yapilacaklar Listesi](#yapilacaklar-listesi)
   - [Katki](#katki)
   - [Tesekkurler](#tesekkurler)
@@ -30,7 +32,7 @@ SourPatch gives users the option to hide certain data like Karma Level and Favor
 
 The extension aims to relieve users from the anxiety that comes with said data. It is similar to Instagram hiding the Like counts.
 
-## Turkish
+## Turkce
 
 ### SourPatch neden var?
 
@@ -44,15 +46,26 @@ Eklentiyi kullandiktan sonra ruh halimde bir iyilesme gozlemledim, hatta telefon
 
 Eger favori butonu yerine limon goruyorsaniz bilin ki eklenti aktif ve calisiyor. Entry favlamak isterseniz o limona tiklamaniz yeterli.
 
-### Secenekler
+### Secenekler (Suan icin secme sansiniz yok.)
+
+#### Entry'lerin favori sayilarini gizle
+
+Entry'lerin favori sayilari gizlenir. Sizin entry'leriniz dahil.
+
+#### Karma seviyesini, puanini ve Entry basarimini gizle
+
+- Entry sayisi basarimini (orn. "azimli") gizler
+- Profilinizdeki karma puanini gizler. (Baska kullanicilarin puanlarini da gizler.)
+- Profilinzdeki karma seviyesini gizler. (Baska kullanicilarin seviyelerini de gizler.)
 
 #### Eksi Seyler ve Pena referanslarini gizle
+
 Asagida listelenen referansari gizler:
 - Ust menudeki "pena" ve "eksi seyler" butonlari.
 - Sag frame'deki "eksi seyler" penceresini
 - Profil sayfasinda sag frame'de "yazarin eksi seyler entry'leri" penceresini.
 
-#### Sol Frame'i gizle
+#### Sol Frame'i gizle (aktif degil)
 
 Bunu aktive edenlere saygim sonsuz. Eger sol frame'deki negativiteden uzaklasmak niyetindeyseniz bunu aktive edebilirsiniz. Boylece yalnizca nokta atisi ile girdiginiz basliklari okur ve sozlukten cikarsiniz.
 
