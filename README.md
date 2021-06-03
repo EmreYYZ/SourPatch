@@ -44,6 +44,8 @@ Eklentiyi kullandiktan sonra ruh halimde bir iyilesme gozlemledim, hatta telefon
 
 ### Nasil kullanilir?
 
+Repo'yu indir, [chrome://extensions](chrome://extensions)'da developer mode'u aktive et. Inik repo klasorunu [chrome://extensions](chrome://extensions)'a surukle birak. Bitti gitti.
+
 Eger favori butonu yerine limon goruyorsaniz bilin ki eklenti aktif ve calisiyor. Entry favlamak isterseniz o limona tiklamaniz yeterli.
 
 ### Secenekler (Suan icin secme sansiniz yok.)
@@ -73,6 +75,7 @@ Bunu aktive edenlere saygim sonsuz. Eger sol frame'deki negativiteden uzaklasmak
 
 Belki yaparim belki yapmam. Sagim solum belli olmaz. Cok sart degil
 
+- [ ] `Releases` bolumune eklentiyi `.ext` uzantili sekilde basitce yuklenebilir sekilde ekle.
 - [ ] Basligi yoket. (sag kliklenen basligi sonsuza dek yokeder. Baslik icinde de ekstra buton olarak bulunur.)
 - [ ] Eksisozluk tasarim yenilemesi. (Bu sart degil ama arayuzu iyice basitlestirmek adina yapabilirim.)
 - [ ] Acun-verse'u engelle. (Acun-verse basliklarini toptan engeller.)
