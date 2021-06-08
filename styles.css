@@ -1,3 +1,13 @@
+/* THEME */
+/* body {
+  background-color: black !important;
+  font-family: Helvetica, Arial, sans-serif !important;
+}
+
+header {
+  background-color: black !important;
+} */
+
 /* hides the favorite count */
 .favorite-count {
   display: none;
