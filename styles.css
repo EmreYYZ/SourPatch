@@ -48,3 +48,8 @@ header {
   opacity: 1;
   text-decoration: none !important;
 }
+
+/* Hides pena video */
+#video {
+  display: none;
+}
