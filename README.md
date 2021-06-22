@@ -6,11 +6,10 @@ A Chrome extension for eksisozluk.com.
   - [Turkce](#turkce)
     - [SourPatch neden var?](#sourpatch-neden-var)
     - [Nasil kullanilir?](#nasil-kullanilir)
-    - [Secenekler (Suan icin secme sansiniz yok.)](#secenekler-suan-icin-secme-sansiniz-yok)
+    - [Ozellikler (Suan icin secme sansiniz yok.)](#ozellikler-suan-icin-secme-sansiniz-yok)
       - [Entry'lerin favori sayilarini gizle](#entrylerin-favori-sayilarini-gizle)
       - [Karma seviyesini, puanini ve Entry basarimini gizle](#karma-seviyesini-puanini-ve-entry-basarimini-gizle)
       - [Eksi Seyler ve Pena referanslarini gizle](#eksi-seyler-ve-pena-referanslarini-gizle)
-      - [Sol Frame'i gizle (aktif degil)](#sol-framei-gizle-aktif-degil)
   - [Yapilacaklar Listesi](#yapilacaklar-listesi)
   - [Katki](#katki)
   - [Tesekkurler](#tesekkurler)
@@ -34,7 +33,7 @@ Repo'yu indir, [chrome://extensions](chrome://extensions)'da developer mode'u ak
 
 Eger favori butonu yerine limon goruyorsaniz bilin ki eklenti aktif ve calisiyor. Entry favlamak isterseniz o limona tiklamaniz yeterli.
 
-### Secenekler (Suan icin secme sansiniz yok.)
+### Ozellikler (Suan icin secme sansiniz yok.)
 
 #### Entry'lerin favori sayilarini gizle
 
@@ -52,11 +51,8 @@ Asagida listelenen referansari gizler:
 
 - Ust menudeki "pena" ve "eksi seyler" butonlari.
 - Sag frame'deki "eksi seyler" penceresini
-- Profil sayfasinda sag frame'de "yazarin eksi seyler entry'leri" penceresini.
-
-#### Sol Frame'i gizle (aktif degil)
-
-Bunu aktive edenlere saygim sonsuz. Eger sol frame'deki negativiteden uzaklasmak niyetindeyseniz bunu aktive edebilirsiniz. Boylece yalnizca nokta atisi ile girdiginiz basliklari okur ve sozlukten cikarsiniz.
+- Profil sayfasinda sag frame'de "yazarin eksi seyler entry'leri" penceresini
+- Baslik detayinda tepede beliren Pena videosunu
 
 ## Yapilacaklar Listesi
 
@@ -67,6 +63,7 @@ Belki yaparim belki yapmam. Sagim solum belli olmaz. Cok sart degil
 - [ ] Eksisozluk tasarim yenilemesi. (Bu sart degil ama arayuzu iyice basitlestirmek adina yapabilirim.)
 - [ ] Acun-verse'u engelle. (Acun-verse basliklarini toptan engeller.)
 - [ ] Negatif-verse'u engelle. (Cok subjektif bir secenek, negatif duygu kaynagi her basligi (Tarihli basliklar, siyasi basliklar, olumle ilgili basliklar vb.) engeller. Kelime bazli filtre.)
+- [ ] Sol Frame'i gizle. Niye eklerim bilmiyorum ama manyak cok.
 
 ## Katki
 

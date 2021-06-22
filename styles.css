@@ -10,7 +10,7 @@ header {
 
 /* hides the favorite count */
 .favorite-count {
-  display: none;
+  display: none !important;
 }
 
 /* hides "pena" and "eksi seyler" buttons from the navigation bar */
@@ -40,8 +40,12 @@ header {
 /* other shit */
 .favorite-link {
   margin-right: 0.5rem;
-  opacity: 0.75;
+  opacity: 0.6;
   text-decoration: none !important;
+}
+
+.favorite-link.favorited {
+  opacity: 1;
 }
 
 .favorite-link:hover {

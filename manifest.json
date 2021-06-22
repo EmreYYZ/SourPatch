@@ -3,32 +3,17 @@
 
   "name": "SourPatch",
   "version": "0.1.0",
-  "description": "Eksi Sozluk'te favori sayisi, sol frame ve sag frame'in (eksi seyler) ve karma puaninizi gizler. Ufak ama mide bulandiran seyleri duzeltir.",
+  "description": "Eksi Sozluk'te ufak ama mide bulandiran seyleri duzeltir. Stresi yok eder.",
 
-  "content_scripts": [{
-    "css": ["styles.css"],
-    "js": ["content.js"],
-    "matches": ["https://*.eksisozluk.com/*", "http://*.eksisozluk.com/*"]
-  }],
-
-  "background": {
-    "service_worker": "background.js"
-  },
-
-  "permissions": [
-    "contextMenus"
+  "content_scripts": [
+    {
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "matches": ["https://*.eksisozluk.com/*", "http://*.eksisozluk.com/*"]
+    }
   ],
 
   "icons": {
     "128": "icon128.png"
-  },
-
-  "action": {
-    "default_popup": "popup.html"
-  },
-
-  "options_ui": {
-    "page": "options.html",
-    "open_in_tab": false
   }
 }

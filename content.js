@@ -1,5 +1,5 @@
-console.log("🍋 SourPatch suan kosuyor...");
+console.log("🍋 SourPatch calisiyor...");
 
 // Fav butonunu limon yap.
 const favButonlari = document.querySelectorAll(`.favorite-link`);
-favButonlari.forEach(favButonu => favButonu.innerHTML = `🍋`)
+favButonlari.forEach((favButonu) => (favButonu.innerHTML = `🍋`));
