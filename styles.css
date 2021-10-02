@@ -57,3 +57,21 @@ header {
 #video {
   display: none;
 }
+
+/* HIDE ADS */
+
+/* under top ad */
+.under-top-ad {
+  display: none !important;
+}
+
+/* OTHER ADS (sidebar and footer) */
+
+.bottom-ads,
+.stick-ad,
+#sticky-ad,
+.ad-double-click,
+.ad-banner,
+.ad-1x1 {
+  display: none !important;
+}
