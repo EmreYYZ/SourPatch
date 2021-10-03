@@ -57,9 +57,9 @@ header {
 #video {
   display: none;
 }
-
+/*  */
 /* HIDE ADS */
-
+/*  */
 /* under top ad */
 .under-top-ad {
   display: none !important;
@@ -73,5 +73,10 @@ header {
 .ad-double-click,
 .ad-banner,
 .ad-1x1 {
+  display: none !important;
+}
+
+/* sol frame sponsorlu reklam basliklarini kaldir */
+.sponsored {
   display: none !important;
 }
