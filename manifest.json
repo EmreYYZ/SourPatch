@@ -7,7 +7,6 @@
 
   "content_scripts": [
     {
-      "css": ["styles.css"],
       "js": ["content.js"],
       "matches": ["https://*.eksisozluk.com/*", "http://*.eksisozluk.com/*"]
     }
@@ -15,7 +14,7 @@
   "options_ui": {
     "page": "options.html"
   },
-  "permissions": ["storage"],
+  "permissions": ["storage", "activeTab"],
   "icons": {
     "128": "icon128.png"
   }

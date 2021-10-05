@@ -11,10 +11,11 @@ var browser = browser || chrome;
 const activeSettingList = [];
 
 const settingsList = [
-  { name: "Remove Ads", id: "ads", isChecked: true },
-  { name: "Remove EksiSeyler references", id: "eksiseyler", isChecked: true },
-  { name: "Remove Pena references", id: "pena", isChecked: true },
-  { name: "Hide Favorite counts", id: "favorites", isChecked: true },
+  { name: "Reklamlari gizle", id: "reklamlar", isChecked: true },
+  { name: "Karma ve seviye referanslarini gizle", id: "karma", isChecked: true },
+  { name: "EksiSeyler referanslarini gizle", id: "eksiseyler", isChecked: true },
+  { name: "Pena referanslarini gizle", id: "pena", isChecked: true },
+  { name: "Favori sayilarini gizle", id: "favori", isChecked: true },
 ];
 
 function setActiveSettings(settingID) {
