@@ -2,11 +2,12 @@
 //   console.log(info.pageUrl);
 // }
 
+// Opens options page in a new tab once you click on the extension icon
 function handleClick() {
-  browser.runtime.openOptionsPage();
+  chrome.runtime.openOptionsPage();
 }
 
-browser.browserAction.onClicked.addListener(handleClick);
+chrome.browserAction.onClicked.addListener(handleClick);
 
 // Add these to the manifest.json later
 // "background": {
