@@ -1,7 +1,5 @@
-const clickbutton = document.querySelector(".clickme");
 const importantDiv = document.querySelector(".important");
 const settingsDiv = document.querySelector(".settings");
-const activeSettings = document.querySelector("#activeSettings");
 const settingsForm = document.querySelector("#settingsForm");
 
 // fix browser bug
@@ -10,71 +8,110 @@ var browser = browser || chrome;
 
 const activeSettingList = [];
 
-const settingsList = [
-  { name: "Reklamlari gizle", id: "reklamlar", isChecked: true },
-  { name: "Karma ve seviye referanslarini gizle", id: "karma", isChecked: true },
-  { name: "EksiSeyler referanslarini gizle", id: "eksiseyler", isChecked: true },
-  { name: "Pena referanslarini gizle", id: "pena", isChecked: true },
-  { name: "Favori sayilarini gizle", id: "favori", isChecked: true },
-];
+let settingsList = {
+  rules: [
+    { name: "Reklamlari gizle", id: "reklamlar", isChecked: true },
+    { name: "Karma ve seviye referanslarini gizle", id: "karma", isChecked: true },
+    { name: "EksiSeyler referanslarini gizle", id: "eksiseyler", isChecked: true },
+    { name: "Pena referanslarini gizle", id: "pena", isChecked: true },
+    { name: "Favori sayilarini gizle", id: "favori", isChecked: true },
+  ],
+};
 
-function setActiveSettings(settingID) {
-  activeSettingList.push(settingID);
-}
+// Check if the local storage has the settings
+browser.storage.sync.get(null, function (result) {
+  console.log("hey", result, result.rules);
 
-clickbutton.addEventListener("click", (e) => {
-  e.preventDefault();
+  if (!result.rules) {
+    console.log("no data, you must be a new user!");
+    writeToDatabase(settingsList);
+  } else {
+    console.log("Clearing previous checkboxes...");
+    // Clear settings list
+    settingsDiv.innerHTML = "";
+
+    console.log("Rerendering checkboxes...");
+    // create each setting as a div/checkbox
+    result.rules.forEach((setting) => {
+      settingsDiv.innerHTML += `<div><input type="checkbox" id="${setting.id}" data-title="${setting.name}" name="${setting.id}" ${
+        setting.isChecked ? "checked" : ""
+      } /><label for="${setting.id}">${setting.name}</label></div>`;
+    });
+  }
 });
 
-// create each setting as a div/checkbox
-settingsList.forEach((setting) => {
-  settingsDiv.innerHTML += `<div><input type="checkbox" id="${setting.id}" data-title="${setting.name}" name="${setting.id}" ${
-    setting.isChecked ? "checked" : null
-  } /><label for="${setting.id}">${setting.name}</label></div>`;
-});
+// write the rules to the database
+const writeToDatabase = (settingsObject) => {
+  console.log(settingsObject);
 
-// submit settings
-const handleSubmit = (e) => {
-  e.preventDefault();
+  let options = settingsObject;
 
-  // convert form data to an object
-  const data = new FormData(e.target);
-  const options = Object.fromEntries(data.entries());
-
-  // Clear Storage
+  // clear previous data in the database
   browser.storage.sync.clear();
   // Save new settings to sync extension storage.
   browser.storage.sync.set(options, function () {
-    console.log("Data is saved.");
     browser.storage.sync.get(null, function (result) {
-      console.log(result);
+      console.log("Data is saved", result);
+      rewriteCheckboxUI();
     });
   });
-  // console.log(browser.storage.sync.get);
 };
 
-settingsForm.addEventListener("submit", handleSubmit);
+// this one handles the click on the submit button.
 
-const checkboxes = document.querySelectorAll("input[type='checkbox']");
+const handleSubmitClick = (e) => {
+  e.preventDefault();
+  let newSet = { rules: [] };
 
-checkboxes.forEach((checkbox) => {
-  checkbox.addEventListener("click", displayCheck);
-});
+  const checkboxes = document.querySelectorAll("input[type=checkbox]");
+  // check each checkbox for checked state
+  checkboxes.forEach((checkbox) => {
+    if (checkbox.checked) {
+      // recreate the og checkbox data with the checkbox state
+      let trueRule = {
+        name: checkbox.dataset.title,
+        id: checkbox.id,
+        isChecked: true,
+      };
+      // push the data to newset
+      newSet.rules.push(trueRule);
+    } else if (!checkbox.checked) {
+      // recreate the og checkbox data with the checkbox state
+      let falseRule = {
+        name: checkbox.dataset.title,
+        id: checkbox.id,
+        isChecked: false,
+      };
+      // push the data to newset
+      newSet.rules.push(falseRule);
+    } else {
+      console.log("Hata var hocam. Kodun checkbox kismiyla ilgili olsa gerek, foreach'e bi bak.");
+    }
+  });
+  console.log(newSet);
+  // write the new settings/rules object to the browser storage
+  writeToDatabase(newSet);
+};
 
-function displayCheck(e) {
-  if (e.target.checked) {
-    console.log(e.target);
-    activeSettingList.push({
-      name: e.target.dataset.title,
-      id: e.target.name,
+// add a listener to the submit button
+document.querySelector("#submit").addEventListener("click", handleSubmitClick);
+
+function rewriteCheckboxUI() {
+  // get saved settings
+  browser.storage.sync.get(null, function (result) {
+    // change default settings into the updated settings
+    let rulesToWrite = result.rules;
+
+    console.log("Clearing previous checkboxes...");
+    // Clear settings list
+    settingsDiv.innerHTML = "";
+
+    console.log("Rerendering checkboxes...");
+    // create each setting as a div/checkbox
+    rulesToWrite.forEach((setting) => {
+      settingsDiv.innerHTML += `<div><input type="checkbox" id="${setting.id}" data-title="${setting.name}" name="${setting.id}" ${
+        setting.isChecked ? "checked" : ""
+      } /><label for="${setting.id}">${setting.name}</label></div>`;
     });
-  } else {
-    activeSettingList.splice(activeSettingList.indexOf(activeSettingList.find((setting) => setting.id === e.target.name)), 1);
-  }
-
-  console.log("Checkbox clicked");
-
-  activeSettingList.forEach((activeSetting) => {
-    activeSettings.innerHTML += `<span>${activeSetting.name}</span>`;
   });
 }

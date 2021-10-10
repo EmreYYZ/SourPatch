@@ -1,5 +1,5 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
 
   "name": "SourPatch",
   "version": "0.1.0",
@@ -8,11 +8,13 @@
   "content_scripts": [
     {
       "js": ["content.js"],
+      "css": ["styles.css"],
       "matches": ["https://*.eksisozluk.com/*", "http://*.eksisozluk.com/*"]
     }
   ],
   "options_ui": {
-    "page": "options.html"
+    "page": "options.html",
+    "browser_style": true
   },
   "permissions": ["storage", "activeTab"],
   "icons": {

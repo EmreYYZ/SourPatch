@@ -2,13 +2,11 @@
 //   console.log(info.pageUrl);
 // }
 
-chrome.runtime.onInstalled.addListener(function () {
-  chrome.contextMenus.create({
-    id: "sampleContextMenu",
-    title: "Basligi Yoket",
-    contexts: ["link"],
-  });
-});
+function handleClick() {
+  browser.runtime.openOptionsPage();
+}
+
+browser.browserAction.onClicked.addListener(handleClick);
 
 // Add these to the manifest.json later
 // "background": {
