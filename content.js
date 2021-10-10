@@ -10,7 +10,6 @@ document.head.appendChild(styleEl);
 var styleSheet = styleEl.sheet;
 
 browser.storage.sync.get(null, function (storageData) {
-  console.log(storageData.rules === true);
   let storageArray = storageData.rules;
   let reklamlar = storageArray[storageArray.findIndex((e) => e.id === "reklamlar")];
   let pena = storageArray[storageArray.findIndex((e) => e.id === "pena")];
@@ -81,11 +80,6 @@ browser.storage.sync.get(null, function (storageData) {
     styleSheet.insertRule(`iframe[title="ekşi şeyler"] { display: none !important; }`, styleSheet.cssRules.length);
 
     // Hides eksiseyler video on sagframe
-    // styleSheet.insertRule(
-    //   `#aside > iframe { display: none !important; } #eksiseyler-author-embed { display: none !important; }`,
-    //   styleSheet.cssRules.length
-    // );
-
     styleSheet.insertRule(`#aside > iframe { display: none !important; }`, styleSheet.cssRules.length);
 
     // removes eksiseyler logo from header

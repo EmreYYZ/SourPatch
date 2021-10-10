@@ -20,17 +20,12 @@ let settingsList = {
 
 // Check if the local storage has the settings
 browser.storage.sync.get(null, function (result) {
-  console.log("hey", result, result.rules);
-
   if (!result.rules) {
-    console.log("no data, you must be a new user!");
     writeToDatabase(settingsList);
   } else {
-    console.log("Clearing previous checkboxes...");
     // Clear settings list
     settingsDiv.innerHTML = "";
 
-    console.log("Rerendering checkboxes...");
     // create each setting as a div/checkbox
     result.rules.forEach((setting) => {
       settingsDiv.innerHTML += `<div><input type="checkbox" id="${setting.id}" data-title="${setting.name}" name="${setting.id}" ${
@@ -42,8 +37,6 @@ browser.storage.sync.get(null, function (result) {
 
 // write the rules to the database
 const writeToDatabase = (settingsObject) => {
-  console.log(settingsObject);
-
   let options = settingsObject;
 
   // clear previous data in the database
@@ -51,7 +44,6 @@ const writeToDatabase = (settingsObject) => {
   // Save new settings to sync extension storage.
   browser.storage.sync.set(options, function () {
     browser.storage.sync.get(null, function (result) {
-      console.log("Data is saved", result);
       rewriteCheckboxUI();
     });
   });
@@ -88,7 +80,6 @@ const handleSubmitClick = (e) => {
       console.log("Hata var hocam. Kodun checkbox kismiyla ilgili olsa gerek, foreach'e bi bak.");
     }
   });
-  console.log(newSet);
   // write the new settings/rules object to the browser storage
   writeToDatabase(newSet);
 };
@@ -102,11 +93,9 @@ function rewriteCheckboxUI() {
     // change default settings into the updated settings
     let rulesToWrite = result.rules;
 
-    console.log("Clearing previous checkboxes...");
     // Clear settings list
     settingsDiv.innerHTML = "";
 
-    console.log("Rerendering checkboxes...");
     // create each setting as a div/checkbox
     rulesToWrite.forEach((setting) => {
       settingsDiv.innerHTML += `<div><input type="checkbox" id="${setting.id}" data-title="${setting.name}" name="${setting.id}" ${
