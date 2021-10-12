@@ -8,14 +8,14 @@
   "content_scripts": [
     {
       "js": ["content.js"],
-      "matches": ["https://*.eksisozluk.com/*", "http://*.eksisozluk.com/*"]
+      "matches": ["https://eksisozluk.com/*"]
     }
   ],
   "options_ui": {
     "page": "options.html",
     "browser_style": true
   },
-  "permissions": ["storage", "activeTab"],
+  "permissions": ["storage"],
   "icons": {
     "128": "icon128.png"
   }
