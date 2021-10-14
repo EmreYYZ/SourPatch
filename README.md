@@ -64,6 +64,7 @@ Belki yaparim belki yapmam. Sagim solum belli olmaz. Cok sart degil
 - [ ] Acun-verse'u engelle. (Acun-verse basliklarini toptan engeller.)
 - [ ] Negatif-verse'u engelle. (Cok subjektif bir secenek, negatif duygu kaynagi her basligi (Tarihli basliklar, siyasi basliklar, olumle ilgili basliklar vb.) engeller. Kelime bazli filtre.)
 - [ ] Sol Frame'i gizle. Niye eklerim bilmiyorum ama manyak cok.
+- [ ] Basliklari ozel anahtar kelimelere gore gizleme. Ornegin kullanici `turk kizi`ni listeye eklediginde, `turk kizi vs rus kizi` basligi o kullaniciya gosterilmeyecek.
 
 ## Katki
 
