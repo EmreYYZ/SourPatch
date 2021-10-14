@@ -1,6 +1,6 @@
 # 🍋 SourPatch
 
-A Chrome extension for eksisozluk.com.
+A Chrome extension for eksisozluk.com. Download now on Chrome Web Store: [https://chrome.google.com/webstore/detail/sourpatch/daikdflfegejiodfijidjgodglljlico](https://chrome.google.com/webstore/detail/sourpatch/daikdflfegejiodfijidjgodglljlico)
 
 - [🍋 SourPatch](#-sourpatch)
   - [Turkce](#turkce)
