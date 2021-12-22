@@ -58,6 +58,7 @@ Asagida listelenen referansari gizler:
 
 Belki yaparim belki yapmam. Sagim solum belli olmaz. Cok sart degil
 
+- [ ] Spoiler'lari gizle. (`--- spoiler ---` tag'ini bulup, araya `display: none;` verir.)
 - [ ] `Releases` bolumune eklentiyi `.ext` uzantili sekilde basitce yuklenebilir sekilde ekle.
 - [ ] Basligi yoket. (sag kliklenen basligi sonsuza dek yokeder. Baslik icinde de ekstra buton olarak bulunur.)
 - [ ] Eksisozluk tasarim yenilemesi. (Bu sart degil ama arayuzu iyice basitlestirmek adina yapabilirim.)
