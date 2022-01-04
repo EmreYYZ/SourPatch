@@ -54,6 +54,10 @@ Asagida listelenen referansari gizler:
 - Profil sayfasinda sag frame'de "yazarin eksi seyler entry'leri" penceresini
 - Baslik detayinda tepede beliren Pena videosunu
 
+#### Avatarlari gizle
+- Profil sayfalarindaki avatarlari gizler.
+- Entrylerin yaninda yer alan avatarlari gizler.
+
 ## Yapilacaklar Listesi
 
 Belki yaparim belki yapmam. Sagim solum belli olmaz. Cok sart degil
