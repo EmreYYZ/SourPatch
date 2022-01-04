@@ -10,6 +10,7 @@ A Chrome extension for eksisozluk.com. Download now on Chrome Web Store: [https:
       - [Entry'lerin favori sayilarini gizle](#entrylerin-favori-sayilarini-gizle)
       - [Karma seviyesini, puanini ve Entry basarimini gizle](#karma-seviyesini-puanini-ve-entry-basarimini-gizle)
       - [Eksi Seyler ve Pena referanslarini gizle](#eksi-seyler-ve-pena-referanslarini-gizle)
+      - [Avatarlari gizle](#avatarlari-gizle)
   - [Yapilacaklar Listesi](#yapilacaklar-listesi)
   - [Katki](#katki)
   - [Tesekkurler](#tesekkurler)
@@ -55,6 +56,7 @@ Asagida listelenen referansari gizler:
 - Baslik detayinda tepede beliren Pena videosunu
 
 #### Avatarlari gizle
+
 - Profil sayfalarindaki avatarlari gizler.
 - Entrylerin yaninda yer alan avatarlari gizler.
 
