@@ -15,6 +15,7 @@ let settingsList = {
     { name: "EksiSeyler referanslarini gizle", id: "eksiseyler", isChecked: true },
     { name: "Pena referanslarini gizle", id: "pena", isChecked: true },
     { name: "Favori sayilarini gizle", id: "favori", isChecked: true },
+    { name: "Avatarlari gizle", id: "avatar", isChecked: true },
   ],
 };
 

@@ -16,6 +16,7 @@ browser.storage.sync.get(null, function (storageData) {
   let favori = storageArray[storageArray.findIndex((e) => e.id === "favori")];
   let eksiseyler = storageArray[storageArray.findIndex((e) => e.id === "eksiseyler")];
   let karma = storageArray[storageArray.findIndex((e) => e.id === "karma")];
+  let avatar = storageArray[storageArray.findIndex((e) => e.id === "avatar")];
 
   // REKLAMLAR REFERENCES
   if (reklamlar.isChecked) {
@@ -92,5 +93,16 @@ browser.storage.sync.get(null, function (storageData) {
 
     // hides karma information and entry count badge (i.e "azimli") on profile page
     styleSheet.insertRule(`#user-badges { display: none; }`, styleSheet.cssRules.length);
+  }
+
+  // AVATAR REFERENCES
+  if (avatar.isChecked === true) {
+    console.log("🍋 Avatarlar kaldiriliyor...");
+
+    // Removes avatars from baslik page
+    styleSheet.insertRule(`.avatar-container { display: none !important; }`, styleSheet.cssRules.length);
+
+    // Removes avatars from profile page
+    styleSheet.insertRule(`#profile-logo { display: none !important; }`, styleSheet.cssRules.length);
   }
 });
