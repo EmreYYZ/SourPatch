@@ -30,7 +30,11 @@ Eklentiyi kullandiktan sonra ruh halimde bir iyilesme gozlemledim, hatta telefon
 
 ### Nasil kullanilir?
 
-Repo'yu indir, [chrome://extensions](chrome://extensions)'da developer mode'u aktive et. Inik repo klasorunu [chrome://extensions](chrome://extensions)'a surukle birak. Bitti gitti.
+1. [En son sürüm](https://github.com/YourUsername/YourRepository/releases/latest) sayfasından `sourpatch-{version}.zip` dosyasını indirin.
+2. Zip dosyasının içeriğini bilgisayarınızdaki bir klasöre çıkarın.
+3. Chrome'u açın ve `chrome://extensions/` adresine gidin.
+4. Sağ üst köşedeki "Geliştirici modu" anahtarını açın.
+5. "Paketlenmemiş uzantıyı yükle" butonuna tıklayın ve dosyaları çıkardığınız klasörü seçin.
 
 Eger favori butonu yerine limon goruyorsaniz bilin ki eklenti aktif ve calisiyor. Entry favlamak isterseniz o limona tiklamaniz yeterli.
 
