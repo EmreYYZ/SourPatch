@@ -28,6 +28,7 @@ jobs:
         run: |
           mkdir -p dist
           version=$(echo "${{ github.ref }}" | sed 's/refs\/tags\///')
+          echo "version=$version" >> $GITHUB_ENV
           zip -r "dist/sourpatch-${version}.zip" . -x '*.git*' -x 'node_modules/*' -x 'dist/*'
 
       - name: Create GitHub release
@@ -45,8 +46,8 @@ jobs:
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: dist/sourpatch-${{ github.ref | sed 's/refs\/tags\///' }}.zip
-          asset_name: sourpatch-${{ github.ref | sed 's/refs\/tags\///' }}.zip
+          asset_path: dist/sourpatch-${{ env.version }}.zip
+          asset_name: sourpatch-${{ env.version }}.zip
           asset_content_type: application/zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
