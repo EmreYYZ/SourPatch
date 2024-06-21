@@ -3,7 +3,6 @@ const settingsDiv = document.querySelector(".settings");
 const settingsForm = document.querySelector("#settingsForm");
 
 // fix browser bug
-// https://github.com/mdn/webextensions-examples/issues/194
 var browser = browser || chrome;
 
 const activeSettingList = [];
@@ -46,12 +45,15 @@ const writeToDatabase = (settingsObject) => {
   browser.storage.sync.set(options, function () {
     browser.storage.sync.get(null, function (result) {
       rewriteCheckboxUI();
+      // Refresh the page after saving settings
+      chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        chrome.tabs.reload(tabs[0].id);
+      });
     });
   });
 };
 
 // this one handles the click on the submit button.
-
 const handleSubmitClick = (e) => {
   e.preventDefault();
   let newSet = { rules: [] };
@@ -78,7 +80,7 @@ const handleSubmitClick = (e) => {
       // push the data to newset
       newSet.rules.push(falseRule);
     } else {
-      console.log("Hata var hocam. Kodun checkbox kismiyla ilgili olsa gerek, foreach'e bi bak.");
+      console.log("Error with the checkbox code, please check the foreach loop.");
     }
   });
   // write the new settings/rules object to the browser storage
