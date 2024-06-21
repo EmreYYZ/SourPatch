@@ -1,6 +1,6 @@
 {
   "name": "sourpatch",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Eksi Sozluk'te ufak ama mide bulandiran seyleri duzeltir. Stresi yok eder.",
   "scripts": {
     "build": "crx pack -o dist/extension.crx -p extension_key.pem"
