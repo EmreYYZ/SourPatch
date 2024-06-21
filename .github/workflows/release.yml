@@ -38,6 +38,8 @@ jobs:
           release_name: Release ${{ github.ref }}
           draft: false
           prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload .crx file to release
         uses: actions/upload-release-asset@v1
@@ -46,3 +48,5 @@ jobs:
           asset_path: dist/extension.crx
           asset_name: extension.crx
           asset_content_type: application/octet-stream
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
