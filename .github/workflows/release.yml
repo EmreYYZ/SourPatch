@@ -24,11 +24,11 @@ jobs:
       - name: Create .pem file
         run: echo "${{ secrets.EXTENSION_PRIVATE_KEY }}" > extension_key.pem
 
-      - name: Create .crx file
+      - name: Create zip file
         run: |
           mkdir -p dist
-          zip -r dist/extension.zip . -x '*.git*' -x 'node_modules/*' -x 'dist/*'
-          npx crx pack -o dist/extension.crx -p extension_key.pem
+          version=$(echo "${{ github.ref }}" | sed 's/refs\/tags\///')
+          zip -r "dist/sourpatch-${version}.zip" . -x '*.git*' -x 'node_modules/*' -x 'dist/*'
 
       - name: Create GitHub release
         id: create_release
@@ -41,12 +41,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload .crx file to release
+      - name: Upload zip file to release
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: dist/extension.crx
-          asset_name: extension.crx
-          asset_content_type: application/octet-stream
+          asset_path: dist/sourpatch-${{ github.ref }}.zip
+          asset_name: sourpatch-${{ github.ref }}.zip
+          asset_content_type: application/zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
